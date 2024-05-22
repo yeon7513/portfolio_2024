@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+@import "./common.scss";
+
+@mixin stickyText() {
+  position: sticky;
+  top: 70%;
+  left: 0;
+  padding: 0 50px;
+  font-family: 'Cafe24Supermagic-Bold-v1.0';
+  font-size: 120px;
+  font-style: italic;
+  text-transform: uppercase;
+  opacity: 0.5;
+  color: $sub-color;
+}
+
+.about {
+  outline: 1px dotted blue;
+}
+
+.bg-text {
+  @include stickyText();
+  outline: 1px dotted green;
+}
+
+.intro-me {
+  outline: 1px dotted red;
+  .intro-title {
+    text-align: center;
+    .intro-typed {
+      font-size: 80px;
+      color: $common-color;
+    }
+  }
+  .intro-content {
+    @include center;
+    height: 500px;
+    // flex-grow: 1;
+    gap: 20px;
+    background: #ccc;
+    .pic {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      outline: 1px dotted red;
+      .big {
+        @include bigCircle;
+        top: 0;
+        left: 40%;
+      }
+      .small {
+        @include smallCircle;
+        bottom: 0;
+        left: 10%;
+      }
+    }
+    .con {
+      width: 50%;
+      outline: 1px dotted purple;
+      div {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+  .bg-text {
+    span {
+      display: block;
+    }
+  }
+}
+
+
+
+
+.skill {
+  height: 1000px;
+  .bg-text {
+    text-align: right;
+  }
+}
