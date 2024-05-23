@@ -15,30 +15,71 @@ export const Main = styled.main`
 
 export const Article = styled.article`
   width: 100%;
-  height: 1500px;
+  height: 100vh;
+  /* media - tablet */
+  @media screen and (max-width: 1023px) {
+    height: auto;
+  }
+
+  /* media - mobile */
+  @media screen and (max-width: 767px) {
+
+  }
 `;
 
 export const HomeContent = styled(Article)`
   height: calc(100vh - 90px);
+  /* media - tablet */
+  @media screen and (max-width: 1023px) {
+    height: auto;
+  }
+
+  /* media - mobile */
+  @media screen and (max-width: 767px) {
+
+  }
 `;
 
 export const Title = styled.h2`
-  padding-right: 10px;
+  margin-bottom: 50px;
   font-family: 'Cafe24Supermagic-Bold-v1.0';
   font-size: 100px;
   font-style: italic;
   text-align: right;
   text-transform: uppercase;
   color: #B67352;
+  &:after {
+    content: "";
+    opacity: 0.5;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: repeating-linear-gradient(
+      to right, #B67352, #B67352 5px, transparent 5px, transparent 10px
+    );
+    transform: skew(-30deg);
+  }
 `;
 
 export const Inner = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 20px;
   margin: 0 auto;
   max-width: 75rem;
   height: 100%;
+
+  /* media - tablet */
+  @media screen and (max-width: 1023px) {
+    flex-wrap: nowrap;
+    max-width: 50rem;
+    height: auto;
+  }
+
+  /* media - mobile */
+  @media screen and (max-width: 767px) {
+
+  }
 `;

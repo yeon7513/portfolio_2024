@@ -7,7 +7,7 @@
   .home-content {
     @include center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.25rem;
   }
 }
 
@@ -15,11 +15,10 @@
 .home-title {
   @include center;
   flex-direction: column;
-  padding: 20px;
-  width: 40%;
+  padding: 1.25rem;
   font-family: 'Cafe24Supermagic-Bold-v1.0';
   h2 {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
@@ -27,14 +26,14 @@
     color: $accent-color;
     span {
       display: block;
-      font-size: 100px;
+      font-size: 6.25rem;
     }
   }
   p {
     position: relative;
     z-index: 1;
-    margin-top: 20px;
-    font-size: 30px;
+    margin-top: 1.25rem;
+    font-size: 1.875rem;
     color: $common-color;
     &::after {
       content: "";
@@ -53,7 +52,7 @@
 
 .aside {
   position: relative;
-  width: 50%;
+  width: 30%;
   height: 100%;
   .big {
     @include bigCircle;
@@ -143,4 +142,37 @@
   100% {
     transform: translate(5%, 0);
   }
+}
+
+
+/* media - tablet */
+@media screen and (max-width: 1023px) {
+  .home {
+    padding: 0 100px;
+    .home-content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .aside {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    .big {
+      top: 40%;
+      left: 40%;
+    }
+    .small {
+      bottom: 10%;
+      left: 50%;
+    }
+  }
+
+}
+
+/* media - mobile */
+@media screen and (max-width: 767px) {
+
 }

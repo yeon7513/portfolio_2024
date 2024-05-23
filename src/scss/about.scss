@@ -2,71 +2,60 @@
 
 @import "./common.scss";
 
-@mixin stickyText() {
-  position: sticky;
-  top: 70%;
-  left: 0;
-  padding: 0 50px;
-  font-family: 'Cafe24Supermagic-Bold-v1.0';
-  font-size: 120px;
-  font-style: italic;
-  text-transform: uppercase;
-  opacity: 0.5;
-  color: $sub-color;
-}
-
-.about {
-  outline: 1px dotted blue;
-}
-
-.bg-text {
-  @include stickyText();
-  outline: 1px dotted green;
-}
-
 .intro-me {
+  padding: 0 20px;
+}
+.info {
+  display: flex;
   outline: 1px dotted red;
-  .intro-title {
-    text-align: center;
-    .intro-typed {
-      font-size: 80px;
-      color: $common-color;
+  .picture {
+    height: 300px;
+  }
+  .info-contents {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: right;
+    .name {
+      font-size: 30px;
+      p {
+        &:first-child {
+          font-size: 50px;
+        }
+        span {
+          font-weight: 800;
+          color: $accent-color;
+        }
+      }
+    }
+    .personal {
+      font-size: 20px;
     }
   }
-  .intro-content {
-    @include center;
-    height: 500px;
-    // flex-grow: 1;
-    gap: 20px;
-    background: #ccc;
-    .pic {
-      position: relative;
-      width: 50%;
-      height: 100%;
-      outline: 1px dotted red;
-      .big {
-        @include bigCircle;
-        top: 0;
-        left: 40%;
-      }
-      .small {
-        @include smallCircle;
-        bottom: 0;
-        left: 10%;
-      }
-    }
-    .con {
-      width: 50%;
-      outline: 1px dotted purple;
-      div {
-        display: flex;
-        gap: 10px;
-      }
-    }
+}
+
+.intro-title {
+  text-align: center;
+  .intro-typed {
+    display: block;
+    font-size: 50px;
   }
-  .bg-text {
-    span {
-      display: block;
+  .intro-desc {
+    margin-top: 20px;
+    p {
+      line-height: 1.6;
+      &:first-child {
+        font-size: 30px;
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 20px;
+          background-color: #ccc;
+        }
+      }
     }
   }
 }
@@ -75,8 +64,17 @@
 
 
 .skill {
-  height: 1000px;
-  .bg-text {
-    text-align: right;
-  }
+  margin-top: 50px;
+}
+
+
+
+/* media - tablet */
+@media screen and (max-width: 1023px) {
+
+}
+
+/* media - mobile */
+@media screen and (max-width: 767px) {
+
 }

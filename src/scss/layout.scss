@@ -172,3 +172,21 @@ footer {
   background-color: $common-color;
   color: $main-color;
 }
+
+/* media - tablet */
+@media screen and (max-width: 1023px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+/* media - mobile */
+@media screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  }
+}

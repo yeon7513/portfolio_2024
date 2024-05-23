@@ -5,8 +5,8 @@ const Skill = () => {
   return (
     <Article className='skill'>
       <Inner>
-        <div className="bg-text">
-          <span>skill</span>
+        <div>
+          skills
         </div>
       </Inner>
     </Article>
