@@ -1,0 +1,7 @@
+@import 'variables.scss';
+@import './common.module.scss';
+
+.header {
+  @include center();
+  color: $commonColor;
+}

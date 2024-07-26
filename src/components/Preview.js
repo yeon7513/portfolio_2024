@@ -1,16 +1,16 @@
 import React from 'react';
-import { item } from '../data/item';
 import { Link } from 'react-router-dom';
+import { item } from '../data/item';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Inner } from './StyledComponent';
 
 const Preview = ({ langs }) => {
   const projects = item[langs] || {};
 
   return (
-    <article className='preview'>
+    <article className="preview">
       <Inner>
         <h2>{langs} projects</h2>
         <Swiper
@@ -25,8 +25,8 @@ const Preview = ({ langs }) => {
           className="mySwiper preview-slide"
         >
           {Object.entries(projects).map(([name, project]) => (
-            <SwiperSlide key={name} className='preview-slide-item'>
-              <div className='preview-content'>
+            <SwiperSlide key={name} className="preview-slide-item">
+              <div className="preview-content">
                 <h3>{project.title}</h3>
                 <div>
                   <h4>프로젝트 소개</h4>
@@ -34,7 +34,10 @@ const Preview = ({ langs }) => {
                   <h4>개발 기간</h4>
                   <p>{project.period}</p>
                 </div>
-                <Link className='btn link-btn' to={`/projects/${langs}/${name}`}>
+                <Link
+                  className="btn link-btn"
+                  to={`/projects/${langs}/${name}`}
+                >
                   {project.title} 보러가기
                 </Link>
               </div>
@@ -44,6 +47,6 @@ const Preview = ({ langs }) => {
       </Inner>
     </article>
   );
-}
+};
 
 export default Preview;

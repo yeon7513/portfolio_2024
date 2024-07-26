@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+li {
+  list-style: none;
+}
+body {
+  // font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;
+}
+button {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -23,7 +23,6 @@ export const Article = styled.article`
 
   /* media - mobile */
   @media screen and (max-width: 767px) {
-
   }
 `;
 
@@ -36,7 +35,6 @@ export const HomeContent = styled(Article)`
 
   /* media - mobile */
   @media screen and (max-width: 767px) {
-
   }
 `;
 
@@ -47,15 +45,19 @@ export const Title = styled.h2`
   font-style: italic;
   text-align: right;
   text-transform: uppercase;
-  color: #B67352;
+  color: #b67352;
   &:after {
-    content: "";
+    content: '';
     opacity: 0.5;
     display: block;
     width: 100%;
     height: 3px;
     background: repeating-linear-gradient(
-      to right, #B67352, #B67352 5px, transparent 5px, transparent 10px
+      to right,
+      #b67352,
+      #b67352 5px,
+      transparent 5px,
+      transparent 10px
     );
     transform: skew(-30deg);
   }
@@ -80,6 +82,5 @@ export const Inner = styled.div`
 
   /* media - mobile */
   @media screen and (max-width: 767px) {
-
   }
 `;

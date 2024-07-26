@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import "./common.scss";
+@import './common.scss';
 
 /* home section */
 .home {
@@ -36,7 +36,7 @@
     font-size: 1.875rem;
     color: $common-color;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -5px;
       left: 50%;
@@ -48,7 +48,6 @@
     }
   }
 }
-
 
 .aside {
   position: relative;
@@ -124,7 +123,6 @@
   }
 }
 
-
 /* keyframe */
 @keyframes upDown {
   0% {
@@ -143,7 +141,6 @@
     transform: translate(5%, 0);
   }
 }
-
 
 /* media - tablet */
 @media screen and (max-width: 1023px) {
@@ -169,10 +166,8 @@
       left: 50%;
     }
   }
-
 }
 
 /* media - mobile */
 @media screen and (max-width: 767px) {
-
 }

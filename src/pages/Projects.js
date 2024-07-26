@@ -1,19 +1,38 @@
 import React from 'react';
-import { Inner, Title } from '../components/StyledComponent';
 import { Link, Outlet } from 'react-router-dom';
-import "../scss/projects.scss";
+import { Inner, Title } from '../components/StyledComponent';
+import '../scss/projects.scss';
 
 const Projects = () => {
-
   return (
-    <section className='project'>
+    <section className="project">
       <Inner>
         <Title>project</Title>
-        <div className='project-desc'>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quisquam vero fugiat tenetur recusandae? Voluptatibus pariatur illo doloremque id iure inventore, veniam labore, suscipit unde voluptate, quia porro eaque provident.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quisquam vero fugiat tenetur recusandae? Voluptatibus pariatur illo doloremque id iure inventore, veniam labore, suscipit unde voluptate, quia porro eaque provident.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quisquam vero fugiat tenetur recusandae? Voluptatibus pariatur illo doloremque id iure inventore, veniam labore, suscipit unde voluptate, quia porro eaque provident.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quisquam vero fugiat tenetur recusandae? Voluptatibus pariatur illo doloremque id iure inventore, veniam labore, suscipit unde voluptate, quia porro eaque provident.</p>
+        <div className="project-desc">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+            quisquam vero fugiat tenetur recusandae? Voluptatibus pariatur illo
+            doloremque id iure inventore, veniam labore, suscipit unde
+            voluptate, quia porro eaque provident.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+            quisquam vero fugiat tenetur recusandae? Voluptatibus pariatur illo
+            doloremque id iure inventore, veniam labore, suscipit unde
+            voluptate, quia porro eaque provident.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+            quisquam vero fugiat tenetur recusandae? Voluptatibus pariatur illo
+            doloremque id iure inventore, veniam labore, suscipit unde
+            voluptate, quia porro eaque provident.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+            quisquam vero fugiat tenetur recusandae? Voluptatibus pariatur illo
+            doloremque id iure inventore, veniam labore, suscipit unde
+            voluptate, quia porro eaque provident.
+          </p>
         </div>
         <nav>
           <ul>
@@ -25,7 +44,7 @@ const Projects = () => {
             </li>
           </ul>
         </nav>
-        <div className='contents'>
+        <div className="contents">
           <Outlet />
         </div>
       </Inner>

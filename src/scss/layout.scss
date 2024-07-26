@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import "./common.scss";
+@import './common.scss';
 
 /* header */
 header {
@@ -29,7 +29,6 @@ header {
     font-size: 20px;
     text-transform: uppercase;
     color: $accent-color;
-
   }
   nav {
     font-family: 'D2Coding';
@@ -112,12 +111,12 @@ footer {
       a {
         position: relative;
         &:hover::before {
-          content: "";
+          content: '';
           position: absolute;
           bottom: -20px;
           width: 10px;
           height: 10px;
-          background-color: rgba(255,255,255, 0.7);
+          background-color: rgba(255, 255, 255, 0.7);
           transform: rotate(45deg);
         }
         &:hover::after {
@@ -126,22 +125,21 @@ footer {
           padding: 10px;
           border-radius: 8px;
           font-size: 12px;
-          background-color: rgba(255,255,255, 0.7);
+          background-color: rgba(255, 255, 255, 0.7);
         }
       }
     }
   }
 }
 .about-links ul li:nth-child(1) a:hover::after {
-  content: "CV";
+  content: 'CV';
 }
 .about-links ul li:nth-child(2) a:hover::after {
-  content: "Github";
+  content: 'Github';
 }
 .about-links ul li:nth-child(3) a:hover::after {
-  content: "blog";
+  content: 'blog';
 }
-
 
 /* footer - portfolio link */
 .portfolio-links {
@@ -151,7 +149,7 @@ footer {
     li {
       @include center;
       &:not(:last-child)::after {
-        content: "";
+        content: '';
         opacity: 0.5;
         display: inline-block;
         margin: 0 5px;

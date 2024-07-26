@@ -4,44 +4,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @font-face {
   font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Cafe24Supermagic-Bold-v1.0';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2') format('woff2');
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2')
+    format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'D2Coding';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 /* colors */
-$main-color: #FEFBF6;
+$main-color: #fefbf6;
 
-$common-color: #ECB159;
-$sub-color: #FFEFCA;
-$accent-color: #B67352;
+$common-color: #ecb159;
+$sub-color: #ffefca;
+$accent-color: #b67352;
 
-$btn-color: #BBA987;
-$hover-color: #86513B;
+$btn-color: #bba987;
+$hover-color: #86513b;
+$hoverColor: #86513b;
 
-$dark-color: #32302C;
-$gray-color: #918E8A;
-
+$dark-color: #32302c;
+$gray-color: #918e8a;
 
 /* reset */
-* {margin: 0; padding: 0; box-sizing: border-box;}
-a {text-decoration: none; color: inherit;}
-li {list-style: none;}
-body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+body {
+  font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;
+}
 
-html, body {
+html,
+body {
   width: 100%;
   background-color: $main-color;
   color: $dark-color;
@@ -50,7 +65,6 @@ html, body {
 p {
   white-space: pre-wrap;
 }
-
 
 #root {
   width: 100%;
@@ -62,13 +76,12 @@ p {
   height: 100%;
 }
 
-
 .swiper-slide {
   border: 1px solid $common-color;
-  background-color: rgba(255, 255, 255, 0.5)!important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
   transition: 0.3s;
   &:hover {
-    background-color: #fff!important;
+    background-color: #fff !important;
     border: 1px solid $accent-color;
   }
 }
@@ -116,13 +129,11 @@ header {
   background-color: $common-color;
 }
 
-
 @mixin smallCircle() {
   width: 18.75rem;
   height: 18.75rem;
   background-color: $sub-color;
 }
-
 
 @mixin center() {
   display: flex;

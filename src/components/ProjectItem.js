@@ -5,9 +5,9 @@ import { item } from '../data/item';
 const ProjectItem = () => {
   const { langs, name } = useParams();
   const project = item[langs][name];
-  
-  return(
-    <div className='item-wrap'>
+
+  return (
+    <div className="item-wrap">
       <h3>{project.title}</h3>
       <div>
         <h4>프로젝트 소개</h4>
@@ -22,12 +22,15 @@ const ProjectItem = () => {
         <p>{project.skill}</p>
       </div>
       <div>
-        <Link className='btn link-btn' to={project.demo} target='_blank'>demo</Link>
-        <Link className='btn link-btn' to={project.git} target='_blank'>github</Link>
+        <Link className="btn link-btn" to={project.demo} target="_blank">
+          demo
+        </Link>
+        <Link className="btn link-btn" to={project.git} target="_blank">
+          github
+        </Link>
       </div>
     </div>
-  )
-}
-
+  );
+};
 
 export default ProjectItem;

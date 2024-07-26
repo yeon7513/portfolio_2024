@@ -1,12 +1,12 @@
 import React from 'react';
 import Introduce from '../components/Introduce';
 import Skill from '../components/Skill';
-import "../scss/about.scss";
 import { Inner, Title } from '../components/StyledComponent';
+import '../scss/about.scss';
 
 const AboutMe = () => {
   return (
-    <section className='about'>
+    <section className="about">
       <Inner>
         <Title>
           <span>about me</span>
@@ -16,6 +16,6 @@ const AboutMe = () => {
       </Inner>
     </section>
   );
-}
+};
 
 export default AboutMe;

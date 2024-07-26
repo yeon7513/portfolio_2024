@@ -1,6 +1,6 @@
 import React from 'react';
 import { Circle, Inner, Title } from '../components/StyledComponent';
-import "../scss/contact.scss";
+import '../scss/contact.scss';
 
 const Contact = () => {
   return (
@@ -16,13 +16,13 @@ const Contact = () => {
             <li>깃허브</li>
           </ul>
           <div>
-            <Circle className='big'></Circle>
-            <Circle className='small'></Circle>
+            <Circle className="big"></Circle>
+            <Circle className="small"></Circle>
           </div>
         </div>
       </Inner>
     </section>
   );
-}
+};
 
 export default Contact;
