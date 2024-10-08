@@ -1,0 +1,11 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  outline: 1px dotted red;
+
+  .idPic {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+.homeContent {
+  flex: 1;
+  margin-left: 348px;
+  padding: 48px 0 0 24px;
+  height: 100%;
+
+  .typed {
+    > span {
+      font-size: 24px;
+    }
+  }
+}

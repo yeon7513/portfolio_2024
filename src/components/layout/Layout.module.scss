@@ -1,0 +1,20 @@
+.wrapper {
+  .content {
+    overflow-y: auto;
+    margin: 73px 0 67px;
+    background-color: var(--common-color);
+    height: calc(100vh - 73px - 67px);
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: var(--bg-color);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 173, 181, 0.5);
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgba(112, 118, 129, 0.5);
+    }
+  }
+}

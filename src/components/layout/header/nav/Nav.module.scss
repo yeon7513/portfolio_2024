@@ -1,0 +1,24 @@
+.nav {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    li {
+      &.active {
+        a {
+          letter-spacing: 2px;
+          color: var(--accent-color);
+        }
+      }
+
+      a {
+        font-family: var(--coding-font);
+
+        &:hover {
+          letter-spacing: 2px;
+          color: var(--hover-color);
+        }
+      }
+    }
+  }
+}

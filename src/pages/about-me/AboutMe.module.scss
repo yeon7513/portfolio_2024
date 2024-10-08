@@ -1,0 +1,16 @@
+.about {
+  padding: 48px 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+  }
+}

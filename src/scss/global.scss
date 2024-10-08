@@ -12,39 +12,47 @@
 }
 
 :root {
-  --main-color: #;
-  --common-color: #;
-  --accent-color: #;
-  --hover-color: #;
+  --bg-color: #222831;
+  --b400-color: #474d57;
+  --b300-color: #707681;
+  --b200-color: #9ba2ad;
+  --b100-color: #c9d0dc;
+  --common-color: #393e46;
+  --g400-color: #5b6169;
+  --g300-color: #80868f;
+  --g200-color: #a7adb6;
+  --g100-color: #cfd5df;
+  --accent-color: #00adb5;
+  --hover-color: #20c1b0;
+  --main-color: #fefefe;
   --main-font: 'SCoreDream', sans-serif;
-  --nav-font: 'D2Coding', sans-serif;
+  --coding-font: 'D2Coding', sans-serif;
 }
 
-/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--main-font);
 }
+
 a {
   text-decoration: none;
   color: inherit;
+  transition: 0.3s;
 }
+
 li {
   list-style: none;
 }
+
 body {
-  color: #333;
+  color: var(--main-color);
 }
 
-/* colors */
-
-/* common */
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-
-/* layout */

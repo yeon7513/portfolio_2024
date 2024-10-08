@@ -1,0 +1,17 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background-color: var(--g400-color);
+
+  a {
+    font-size: 14px;
+  }
+}

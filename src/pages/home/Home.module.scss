@@ -1,7 +1,8 @@
-.nav {
-  font-family: var(--nav-font);
-  .test {
-    font-family: var(--main-font);
-    font-size: 40px;
-  }
+.home {
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    var(--b400-color) 28%,
+    var(--common-color) 28%
+  );
 }
