@@ -37,6 +37,14 @@ li {
   list-style: none;
 }
 
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 body {
   color: var(--main-color);
 }

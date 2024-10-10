@@ -30,13 +30,25 @@ function Stack({ className }) {
   };
 
   return (
-    <div className={cn(styles.stack, className)}>
+    <div className={styles.stack}>
       <div className={styles.sortBtnWrap}>
-        <button onClick={() => handleSort('#자신있어요')}>Confident</button>
-        <button onClick={() => handleSort('#잘할수있어요')}>Proficient</button>
-        <button onClick={() => handleSort('#조금할수있어요')}>Basic</button>
+        <button onClick={() => handleSort('#자신있어요')}>
+          <span className={styles.shadow}></span>
+          <span className={styles.edge}></span>
+          <span className={styles.front}>I'm Confident!!</span>
+        </button>
+        <button onClick={() => handleSort('#잘할수있어요')}>
+          <span className={styles.shadow}></span>
+          <span className={styles.edge}></span>
+          <span className={styles.front}>Do it well!</span>
+        </button>
+        <button onClick={() => handleSort('#조금할수있어요')}>
+          <span className={styles.shadow}></span>
+          <span className={styles.edge}></span>
+          <span className={styles.front}>Little bit..</span>
+        </button>
       </div>
-      <motion.div layout className={styles.container}>
+      <motion.div layout className={cn(styles.container, className)}>
         <AnimatePresence>
           {sortedData.map((data) => (
             <motion.div
