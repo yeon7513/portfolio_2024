@@ -1,5 +1,6 @@
 import React from 'react';
 import contactAvatar from '../../assets/contact.png';
+import ImageBox from '../../components/image-box/ImageBox';
 import Container from '../../components/layout/container/Container';
 import styles from './Contact.module.scss';
 
@@ -7,7 +8,7 @@ function Contact() {
   return (
     <div className={styles.contact}>
       <Container className={styles.container}>
-        <img className={styles.avatar} src={contactAvatar} alt="" />
+        <ImageBox className={styles.avatar} src={contactAvatar} />
         <div className={styles.content}>
           <h2>thank you!</h2>
           <ul>

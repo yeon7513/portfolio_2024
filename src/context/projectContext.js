@@ -1,12 +1,11 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext } from 'react';
+import { projectData } from '../lib/projectData';
 
 const ProjectContext = createContext();
 
 export function ProjectProvider({ children }) {
-  const [project, setProject] = useState(null);
-
   return (
-    <ProjectContext.Provider value={{ project, setProject }}>
+    <ProjectContext.Provider value={projectData}>
       {children}
     </ProjectContext.Provider>
   );

@@ -1,25 +1,26 @@
+import cn from 'classnames';
+import { motion } from 'framer-motion';
 import React from 'react';
 import styles from './ProjectList.module.scss';
+import ProjectListItem from './project-list-item/ProjectListItem';
 
-function ProjectList({ list }) {
+function ProjectList({ list, onClick, isSelected }) {
   return (
-    <div className={styles.projectList}>
+    <motion.div
+      className={
+        isSelected
+          ? cn(styles.projectList, styles.selected)
+          : styles.projectList
+      }
+      onClick={onClick}
+      whileTap={{ scale: 0.9 }}
+      transition={{ duration: 0.2 }}
+    >
       <div className={styles.title}>{list.title}</div>
-      {list.techStack.map((stack, idx) => (
-        <div key={idx} className={styles.techStack}>
-          {stack.item.length !== 0 && (
-            <>
-              <h3>{stack.label}</h3>
-              {stack.item.map((item, idx) => (
-                <div key={idx} className={styles.stackContent}>
-                  <span>{item}</span>
-                </div>
-              ))}
-            </>
-          )}
-        </div>
-      ))}
-    </div>
+      <div>기간 : {list.period}</div>
+      <div>개요 : {list.summary}</div>
+      {isSelected && <ProjectListItem stack={list.techStack} />}
+    </motion.div>
   );
 }
 
