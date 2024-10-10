@@ -1,10 +1,11 @@
+import cn from 'classnames';
 import React from 'react';
-import { infomationData } from '../../../data/aboutData';
+import { infomationData } from '../../../lib/aboutData';
 import styles from './Infomation.module.scss';
 
-function Infomation() {
+function Infomation({ className }) {
   return (
-    <div className={styles.infomation}>
+    <div className={cn(styles.infomation, className)}>
       {infomationData.map((data, idx) => (
         <div key={idx} className={styles.content}>
           <h2 className={styles.title}>{data.title}</h2>

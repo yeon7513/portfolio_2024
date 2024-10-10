@@ -1,15 +1,6 @@
 @charset "utf-8";
 
-/* common font-family */
-@import url('https://webfontworld.github.io/score/SCoreDream.css');
-
-@font-face {
-  font-family: 'D2Coding';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff')
-    format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import './font.scss';
 
 :root {
   --bg-color: #222831;
@@ -25,7 +16,7 @@
   --accent-color: #00adb5;
   --hover-color: #20c1b0;
   --main-color: #fefefe;
-  --main-font: 'SCoreDream', sans-serif;
+  --main-font: 'S-CoreDream', sans-serif;
   --coding-font: 'D2Coding', sans-serif;
 }
 

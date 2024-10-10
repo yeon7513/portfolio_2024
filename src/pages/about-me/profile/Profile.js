@@ -1,6 +1,6 @@
 import React from 'react';
 import IDPicture from '../../../assets/id_picture.jpg';
-import { profileData } from '../../../data/aboutData';
+import { profileData } from '../../../lib/aboutData';
 import { changeIcons } from '../../../utils/changeIcons';
 import styles from './Profile.module.scss';
 
