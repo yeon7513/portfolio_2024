@@ -13,6 +13,12 @@
 
     .logo {
       font-size: 18px;
+
+      &:hover {
+        > a {
+          color: var(--hover-color);
+        }
+      }
     }
   }
 }

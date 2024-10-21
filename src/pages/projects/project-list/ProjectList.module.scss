@@ -1,11 +1,52 @@
 .projectList {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   padding: 24px;
   border-radius: var(--main-color);
   transition: 0.3s;
   outline: none;
+  border-radius: 24px;
+  scroll-margin-top: 48px;
+  cursor: pointer;
 
   &.selected {
-    background-color: red;
+    border-radius: 24px;
+    background-color: #fff;
+    color: var(--common-color);
+
+    .title {
+      font-weight: 600;
+    }
+
+    .icon {
+      color: var(--accent-color);
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .desc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+
+    > .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+    }
+
+    &.period {
+    }
+
+    &.summary {
+    }
   }
 }

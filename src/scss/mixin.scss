@@ -75,3 +75,25 @@
     outline: none;
   }
 }
+
+@mixin marker() {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  z-index: 1;
+  width: fit-content;
+  padding: 0 4px;
+
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 12px;
+    opacity: 0.5;
+    transform: skew(-10deg);
+  }
+}

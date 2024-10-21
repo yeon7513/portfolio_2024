@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Container from '../../components/layout/container/Container';
 import { useProjectContext } from '../../context/projectContext';
 import styles from './Projects.module.scss';
@@ -8,10 +9,17 @@ import ProjectList from './project-list/ProjectList';
 function Projects() {
   const projects = useProjectContext();
   const [selectedProjectId, setSelectedProjectId] = useState('numberGuess');
+  const location = useLocation();
 
   const handleProjectClick = (id) => {
     setSelectedProjectId(id);
   };
+
+  useEffect(() => {
+    if (location.state && location.state.selectedProjectId) {
+      setSelectedProjectId(location.state.selectedProjectId);
+    }
+  }, [location.state]);
 
   return (
     <Container className={styles.projects}>

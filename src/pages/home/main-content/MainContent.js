@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
+import { useProjectContext } from '../../../context/projectContext';
 import Stack from '../../about-me/stack/Stack';
 import styles from './MainContent.module.scss';
+import ProjectPreview from './project-preview/ProjectPreview';
 
 function MainContent() {
+  const projects = useProjectContext();
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
+
+  const navigate = useNavigate();
+
+  const handleProjectClick = (id) => {
+    setSelectedProjectId(id);
+    navigate('/projects', { state: { selectedProjectId: id } });
+  };
+
   return (
     <div className={styles.homeContent}>
       <div className={styles.typed}>
@@ -21,6 +34,9 @@ function MainContent() {
         <span> 문희연</span>입니다!
       </p>
       <Stack className={styles.mainStack} />
+      <div className={styles.mainProjectList}>
+        <ProjectPreview />
+      </div>
     </div>
   );
 }

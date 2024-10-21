@@ -1,12 +1,25 @@
 import cn from 'classnames';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { TbBubbleText, TbCalendarTime } from 'react-icons/tb';
 import styles from './ProjectList.module.scss';
 import ProjectListItem from './project-list-item/ProjectListItem';
 
 function ProjectList({ list, onClick, isSelected }) {
+  const itemRef = useRef(null);
+
+  useEffect(() => {
+    if (isSelected && itemRef.current) {
+      itemRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }, [isSelected]);
+
   return (
     <motion.div
+      ref={itemRef}
       className={
         isSelected
           ? cn(styles.projectList, styles.selected)
@@ -16,9 +29,19 @@ function ProjectList({ list, onClick, isSelected }) {
       whileTap={{ scale: 0.9 }}
       transition={{ duration: 0.2 }}
     >
-      <div className={styles.title}>{list.title}</div>
-      <div>기간 : {list.period}</div>
-      <div>개요 : {list.summary}</div>
+      <h2 className={styles.title}>{list.title}</h2>
+      <div className={cn(styles.desc, styles.period)}>
+        <span className={styles.icon}>
+          <TbCalendarTime />
+        </span>
+        <span>{list.period}</span>
+      </div>
+      <div className={cn(styles.desc, styles.summary)}>
+        <span className={styles.icon}>
+          <TbBubbleText />
+        </span>
+        <span>{list.summary}</span>
+      </div>
       {isSelected && <ProjectListItem stack={list.techStack} />}
     </motion.div>
   );
