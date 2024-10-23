@@ -122,7 +122,7 @@ export const projectData = [
           'swiper',
           'BootStrap',
           '카카오 맵 API',
-          'FullCalendar',
+          'FullCalendar API',
           'Google Calendar API',
         ],
       },

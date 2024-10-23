@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
 import { useProjectContext } from '../../../context/projectContext';
@@ -8,12 +8,13 @@ import ProjectPreview from './project-preview/ProjectPreview';
 
 function MainContent() {
   const projects = useProjectContext();
-  const [selectedProjectId, setSelectedProjectId] = useState(null);
+  // const [selectedProjectId, setSelectedProjectId] = useState(null);
 
   const navigate = useNavigate();
 
   const handleProjectClick = (id) => {
-    setSelectedProjectId(id);
+    console.log(id);
+    // setSelectedProjectId(id);
     navigate('/projects', { state: { selectedProjectId: id } });
   };
 
@@ -35,7 +36,13 @@ function MainContent() {
       </p>
       <Stack className={styles.mainStack} />
       <div className={styles.mainProjectList}>
-        <ProjectPreview />
+        {projects.map((data) => (
+          <ProjectPreview
+            key={data.id}
+            project={data}
+            onClick={() => handleProjectClick(data.id)}
+          />
+        ))}
       </div>
     </div>
   );
