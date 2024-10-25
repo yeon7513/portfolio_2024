@@ -32,7 +32,7 @@
 
   .desc {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     font-size: 14px;
 
@@ -41,6 +41,11 @@
       justify-content: center;
       align-items: center;
       font-size: 20px;
+    }
+
+    > p {
+      word-break: keep-all;
+      white-space: pre-wrap;
     }
 
     &.period {

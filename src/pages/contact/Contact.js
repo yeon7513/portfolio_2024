@@ -1,5 +1,5 @@
 import React from 'react';
-import contactAvatar from '../../assets/contact.png';
+import contactAvatar from '../../assets/img/contact.png';
 import ImageBox from '../../components/image-box/ImageBox';
 import Container from '../../components/layout/container/Container';
 import styles from './Contact.module.scss';

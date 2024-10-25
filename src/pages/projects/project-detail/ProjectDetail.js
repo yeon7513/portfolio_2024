@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ImageBox from '../../../components/image-box/ImageBox';
+import VideoBox from '../../../components/video-box/VideoBox';
 import { useProjectContext } from '../../../context/projectContext';
 import styles from './ProjectDetail.module.scss';
 
@@ -10,16 +9,20 @@ function ProjectDetail({ projectId }) {
 
   return (
     <div className={styles.detail}>
-      <ImageBox className={styles.detailImg} src={project.imgUrl} />
-      <div className={styles.description}>{project.desc}</div>
-      <div>
-        <Link to={project.demo} target="_blank">
-          demo
-        </Link>
-        <Link to={project.source} target="_blank">
-          source
-        </Link>
-      </div>
+      <VideoBox className={styles.detailVideo} src={project.videoUrl} />
+      {project.desc.map((desc, idx) => (
+        <div className={styles.description} key={idx}>
+          <h4>{desc.label}</h4>
+          <ol className={styles.explane}>
+            {desc.explanation.map((exp, idx) => (
+              <li key={idx}>
+                <span>{idx + 1}.</span>
+                <p>{exp}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      ))}
     </div>
   );
 }

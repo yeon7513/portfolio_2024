@@ -1,5 +1,5 @@
 import React from 'react';
-import IDPicture from '../../../assets/id_picture.jpg';
+import IDPicture from '../../../assets/img/id_picture.jpg';
 import ImageBox from '../../../components/image-box/ImageBox';
 import { profileData } from '../../../lib/aboutData';
 import { changeIcons } from '../../../utils/changeIcons';

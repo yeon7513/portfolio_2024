@@ -97,3 +97,16 @@
     transform: skew(-10deg);
   }
 }
+
+@mixin keyword() {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  span {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 14px;
+    background-color: var(--accent-color);
+    color: var(--main-color);
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { IoDocumentText } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-import avatar from '../../../assets/avatar.png';
+import avatar from '../../../assets/img/avatar.png';
 import ImageBox from '../../../components/image-box/ImageBox';
 import styles from './Introduce.module.scss';
 

@@ -40,9 +40,16 @@ function ProjectList({ list, onClick, isSelected }) {
         <span className={styles.icon}>
           <TbBubbleText />
         </span>
-        <span>{list.summary}</span>
+        <p>{list.summary}</p>
       </div>
-      {isSelected && <ProjectListItem stack={list.techStack} />}
+      {isSelected && (
+        <ProjectListItem
+          stack={list.techStack}
+          keywords={list.keyword}
+          demo={list.demo}
+          source={list.source}
+        />
+      )}
     </motion.div>
   );
 }

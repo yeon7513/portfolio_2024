@@ -1,31 +1,36 @@
 @import '/src/scss/mixin.scss';
 
 .listItem {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 8px;
-  padding-top: 16px;
-  border-top: 1px dashed var(--g200-color);
+  .keywords {
+    @include keyword();
+  }
 
-  .techStack {
+  .content {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-
-    .label {
-      @include marker();
-    }
-
-    .stackContent {
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--g200-color);
+    .techStack {
       display: flex;
-      align-items: center;
-      gap: 6px;
-      padding-left: 8px;
-      font-size: 14px;
+      flex-direction: column;
+      gap: 2px;
 
-      .icon {
-        font-size: 4px;
+      .label {
+        @include marker();
+      }
+
+      .stackContent {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding-left: 8px;
+        font-size: 14px;
+
+        .icon {
+          font-size: 4px;
+        }
       }
     }
   }

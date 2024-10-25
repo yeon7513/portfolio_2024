@@ -10,7 +10,9 @@ function VideoBox({ src, className }) {
           <source src={src} type="video/mp4" />
         </video>
       ) : (
-        <p className={styles.noVideo}>동영상을 재생할 수 없습니다.</p>
+        <p className={cn(styles.noVideo, className)}>
+          동영상을 재생할 수 없습니다.
+        </p>
       )}
     </>
   );
