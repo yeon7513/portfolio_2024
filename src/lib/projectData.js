@@ -9,7 +9,7 @@ import typingRaceImg from '../assets/img/typing-race.png';
 
 import billishuVideo from '../assets/video/billishu.mp4';
 import drinkMateVideo from '../assets/video/drink-mate.mp4';
-// import fakeKeyboardVideo from '../assets/video/fake-keyboard.mp4';
+import fakeKeyboardVideo from '../assets/video/fake-keyboard.mp4';
 import iFarmVideo from '../assets/video/i-farm.mp4';
 import matchCardVideo from '../assets/video/match-card.mp4';
 import numberGuessVideo from '../assets/video/number-guess.mp4';
@@ -116,7 +116,7 @@ export const projectData = [
   {
     id: 'fakeKeyboard',
     imgUrl: fakeKeyboardImg,
-    videoUrl: '',
+    videoUrl: fakeKeyboardVideo,
     title: 'Fake Keyboard',
     summary:
       'key event를 활용하여 사용자 입력과 연동된 가상 키보드를 구현한 프로젝트입니다.',

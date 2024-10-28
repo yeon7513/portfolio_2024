@@ -1,12 +1,24 @@
 import cn from 'classnames';
-import React from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import styles from './VideoBox.module.scss';
 
-function VideoBox({ src, className }) {
+const VideoBox = forwardRef(({ src, className }, ref) => {
+  useEffect(() => {
+    if (ref?.current) {
+      ref.current.load();
+    }
+  }, [src, ref]);
+
   return (
     <>
       {src ? (
-        <video muted autoPlay loop className={cn(styles.videoBox, className)}>
+        <video
+          muted
+          autoPlay
+          loop
+          className={cn(styles.videoBox, className)}
+          ref={ref}
+        >
           <source src={src} type="video/mp4" />
         </video>
       ) : (
@@ -16,6 +28,6 @@ function VideoBox({ src, className }) {
       )}
     </>
   );
-}
+});
 
 export default VideoBox;
